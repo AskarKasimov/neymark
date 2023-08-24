@@ -1,5 +1,5 @@
 .navbarContainer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -16,4 +16,12 @@
     height: 70px;
     // background-color: #000000;
     max-width: 1000px;
+}
+
+.link {
+    fill: #D7D7D7;
+}
+
+.link:hover {
+    fill: #FFFFFF;
 }

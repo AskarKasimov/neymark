@@ -1,6 +1,6 @@
+import { Outlet } from "react-router-dom";
 import style from "./App.module.scss";
 
-import MainPage from "./MainPage";
 import NavBar from "./NavBar";
 
 const App = () => {
@@ -8,7 +8,7 @@ const App = () => {
     return (
         <div className={style.App}>
             <img className={style.logo} src="/Vector.png" alt="" />
-            <MainPage />
+            <Outlet />
             {
                 authed
                     ? <NavBar />

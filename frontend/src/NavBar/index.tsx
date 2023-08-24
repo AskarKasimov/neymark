@@ -8,13 +8,13 @@ const NavBar = () => {
     return (
         <div className={styles.navbarContainer}>
             <div className={styles.navbar}>
-                <Link to="add">
+                <Link className={styles.link} to="add">
                     <AddSVG />
                 </Link>
-                <Link to="/">
+                <Link className={styles.link} to="/">
                     <HomeSVG />
                 </Link>
-                <Link to="home">
+                <Link className={styles.link} to="home">
                     <ProfileSVG />
                 </Link>
             </div>
