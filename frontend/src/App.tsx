@@ -7,6 +7,7 @@ const App = () => {
     const authed = true;
     return (
         <div className={style.App}>
+            <img className={style.logo} src="/Vector.png" alt="" />
             <MainPage />
             {
                 authed
