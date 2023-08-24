@@ -1,0 +1,16 @@
+.navbarContainer {
+    width: 100%;
+    background-color: #000000;
+}
+
+.navbar {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: #000000;
+    max-width: 1000px;
+}

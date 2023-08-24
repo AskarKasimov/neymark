@@ -1,0 +1,10 @@
+services:
+  neymarkfront:
+    build:
+      context: ./frontend
+      args:
+        GENERATE_SOURCEMAP: 0
+    container_name: neymarkfront
+    restart: on-failure
+    ports:
+      - '8181:8181'
