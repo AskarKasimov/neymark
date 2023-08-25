@@ -1,0 +1,73 @@
+.Rating {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 15vh;
+
+    & img {
+        align-self: flex-start;
+        width: 50%;
+        max-width: 200px;
+    }
+
+    & h1 {
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
+
+.rateList {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: stretch;
+    width: 100%;
+
+    & tr {
+        border-radius: 5px;
+        background: #373737;
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+.top,
+.name,
+.points {
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+.top {
+    width: 15%;
+    max-width: 50px;
+    border-right: 1px #282828 solid;
+    text-align: center;
+}
+
+.name {
+    width: 100%;
+    border-right: 1px #282828 solid;
+    padding-left: 8px;
+}
+
+.points {
+    width: 20%;
+    max-width: 70px;
+    text-align: center;
+}

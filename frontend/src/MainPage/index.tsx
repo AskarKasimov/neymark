@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import style from "./MainPage.module.scss";
+import { ReactComponent as ArrowSVG } from "./arrow.svg";
 
 const MainPage = () => {
     return (
@@ -13,11 +14,14 @@ const MainPage = () => {
                     <h1>НЕЙМАРК</h1>
                     <p>Добро пожаловать в межвузовский кампус мирового уровня в Нижнем Новгороде</p>
                     <div className={style.arrow}>
-                        <div className="arrow">
+                        {/* <div className="arrow">
                             <span></span>
                             <span></span>
                             <span></span>
-                        </div>
+                        </div> */}
+                        <ArrowSVG />
+                        <ArrowSVG />
+                        <ArrowSVG />
                     </div>
                 </div>
             </div>

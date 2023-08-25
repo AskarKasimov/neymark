@@ -30,7 +30,6 @@
 
 .Neymark {
     max-width: 1000px;
-    z-index: 10;
     color: #FFFFFF;
 
     & h1 {
@@ -43,17 +42,36 @@
 }
 
 .arrow {
-    margin: 0 auto;
+    // position: relative !important;
     margin-top: 10vh;
-    height: 30px;
-    width: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
 
     & svg {
+        // position: relative !important;
         margin: 0 auto;
         width: 30px;
         height: 30px;
+        // animation: bounce 0.5s;
+        // animation-direction: alternate;
+        // animation-iteration-count: infinite;
+        // rotate: 90deg;
     }
 }
+
+// @keyframes bounce {
+//     from {
+//         transform: translate3d(0, 0, 0);
+//     }
+
+//     to {
+//         transform: translate3d(20px, 0, 0);
+//     }
+// }
 
 .schedule {
     margin-top: 2vw;

@@ -4,18 +4,21 @@
     left: 0;
     width: 100%;
     background-color: #121212;
-    // opacity: .8;
+    z-index: 100;
 }
 
 .navbar {
     margin: 0 auto;
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 70px;
+    z-index: 100;
     max-width: 1000px;
+    background-color: #121212;
 }
 
 .link {
@@ -24,4 +27,64 @@
 
 .link:hover {
     fill: #FFFFFF;
+}
+
+.topMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 70px;
+    max-width: 1000px;
+    width: 100%;
+    align-self: center;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    & img {
+        width: 50%;
+        max-width: 200px;
+    }
+}
+
+.profile {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    transition: transform .5s;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+
+    & p {
+        margin-bottom: 13vh;
+        align-self: center;
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+
+    & a {
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 27px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
 }

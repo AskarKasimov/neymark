@@ -18,6 +18,8 @@ import SignUp from './SignIn/SignUp';
 import Student from './SignIn/SignUp/StudentSIgnUp';
 import StudentSignUp from './SignIn/SignUp/StudentSIgnUp';
 import CompanySignUp from './SignIn/SignUp/CompanySignUp';
+import Profile from './Profle';
+import Rating from './Rating';
 
 const router = createBrowserRouter([
     {
@@ -71,6 +73,14 @@ const router = createBrowserRouter([
                         element: <Lections />
                     },
                 ]
+            },
+            {
+                path: "profile",
+                element: <Profile />
+            },
+            {
+                path: "rating",
+                element: <Rating />
             },
         ]
     },

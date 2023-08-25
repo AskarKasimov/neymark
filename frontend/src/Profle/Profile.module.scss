@@ -1,0 +1,79 @@
+.Profile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    & img {
+        align-self: flex-start;
+        width: 50%;
+        max-width: 200px;
+    }
+
+    & h1 {
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    & h2 {
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    & h3 {
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        background-color: #121212;
+        position: sticky;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        top: -1px;
+        left: 0;
+    }
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+    border-bottom: #D9D9D9 1px solid;
+    padding-bottom: 20px;
+
+    & p {
+        color: #FFF;
+        font-family: Manrope;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
+
+.achievements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 14px;
+}
+
+.achievement {
+    width: 100px;
+    height: 100px;
+    background-color: #FFF;
+}

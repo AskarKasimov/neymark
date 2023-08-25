@@ -4,18 +4,22 @@ import style from "./App.module.scss";
 import NavBar from "./NavBar";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { useEffect } from "react";
 
 const App = () => {
     const path = useLocation();
-    const authed = false;
+    const authed = true;
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [path])
     return (
         <div className={style.App}>
-            <Outlet />
             {
                 authed
                     ? <NavBar />
                     : null
             }
+            <Outlet />
             <ToastContainer
                 position="bottom-right"
                 autoClose={3000}
