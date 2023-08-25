@@ -12,6 +12,12 @@ import Lections from './AddPage/Lections';
 import Startups from './AddPage/Startups';
 import Competitions from './AddPage/Competitions';
 import Main from './AddPage/Main';
+import SignIn from './SignIn';
+import Schedule from './MainPage/Schedule';
+import SignUp from './SignIn/SignUp';
+import Student from './SignIn/SignUp/StudentSIgnUp';
+import StudentSignUp from './SignIn/SignUp/StudentSIgnUp';
+import CompanySignUp from './SignIn/SignUp/CompanySignUp';
 
 const router = createBrowserRouter([
     {
@@ -19,8 +25,30 @@ const router = createBrowserRouter([
         element: <App />,
         children: [
             {
-                index: true,
-                element: <MainPage />
+                path: "",
+                element: <MainPage />,
+                children: [
+                    {
+                        path: "",
+                        element: <Schedule />
+                    },
+                    {
+                        path: "sign-in",
+                        element: <SignIn />
+                    },
+                    {
+                        path: "sign-up",
+                        element: <SignUp />
+                    },
+                    {
+                        path: "sign-up/student",
+                        element: <StudentSignUp />
+                    },
+                    {
+                        path: "sign-up/company",
+                        element: <CompanySignUp />
+                    }
+                ]
             },
             {
                 path: "activities",
