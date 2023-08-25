@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import style from "./MainPage.module.scss";
 import { ReactComponent as ArrowSVG } from "./arrow.svg";
 
@@ -19,10 +18,9 @@ const MainPage = () => {
                 </div>
             </div>
             <div className={style.schedule}>
-                <div className={style.datePicker}>
+                <h2>Расписание</h2>
+                <div className={style.filter}>
                     <input type="date" defaultValue={new Date().toISOString().substring(0, 10)} />
-                </div>
-                <div className={style.filterPicker}>
                     <select defaultValue="first">
                         <option defaultValue="first">First Value</option>
                         <option defaultValue="second">Second Value</option>

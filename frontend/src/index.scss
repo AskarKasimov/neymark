@@ -4,17 +4,57 @@ html {
     scroll-behavior: smooth;
 }
 
-* {
-    margin: 0 0 0 0;
+#root {
+    background: rgba(0, 0, 0, .5);
+}
+
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input[type="date"],
+select {
+    background-color: #FFF;
+    padding: 15px;
+    font-family: "Roboto Mono", monospace;
+    color: #000000;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+select {
+    width: 40px;
+    height: 40px;
+    -moz-appearance: none;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+    appearance: none;
+    font-size: 0;
+}
+
+option {
+    font-size: 20px;
+}
+
+::-webkit-calendar-picker-indicator {
+    background-color: #FFF;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
 }
 
 body {
     background-color: #121212;
     font-family: 'Manrope', sans-serif;
-}
-
-#root {
-    background: rgba(0, 0, 0, .6);
+    overflow-x: hidden;
 }
 
 a {
