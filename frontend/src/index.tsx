@@ -8,6 +8,10 @@ import App from './App';
 import "./index.scss";
 import MainPage from './MainPage';
 import AddPage from './AddPage';
+import Lections from './AddPage/Lections';
+import Startups from './AddPage/Startups';
+import Competitions from './AddPage/Competitions';
+import Main from './AddPage/Main';
 
 const router = createBrowserRouter([
     {
@@ -19,9 +23,27 @@ const router = createBrowserRouter([
                 element: <MainPage />
             },
             {
-                path: "add",
-                element: <AddPage />
-            }
+                path: "activities",
+                element: <AddPage />,
+                children: [
+                    {
+                        index: true,
+                        element: <Main />
+                    },
+                    {
+                        path: "startups",
+                        element: <Startups />
+                    },
+                    {
+                        path: "competitions",
+                        element: <Competitions />
+                    },
+                    {
+                        path: "lections",
+                        element: <Lections />
+                    },
+                ]
+            },
         ]
     },
 ])
