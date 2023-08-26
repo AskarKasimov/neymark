@@ -7,4 +7,4 @@ services:
     container_name: neymarkfront
     restart: on-failure
     ports:
-      - '8181:8181'
+      - '3000:3000'

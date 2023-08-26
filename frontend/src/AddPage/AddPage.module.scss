@@ -23,9 +23,11 @@
     justify-content: center;
     gap: 23px;
     align-items: center;
+    margin-bottom: 15vh;
 }
 
 .AddButton {
+    // color: #FFF;
     display: flex;
     width: 100%;
     padding-top: 3vh;
@@ -34,13 +36,18 @@
     align-items: center;
     border-radius: 15px;
     border: 1px solid #450000;
-    background: #F1F1F1;
+    // background: #303030;
+    background: #D7D7D7;
     font-size: 3.5vh;
     text-align: center;
 }
 
+.light {
+    box-shadow: 0px -8px 2px 0px #00B2FF inset;
+}
+
 .blue {
-    box-shadow: 0px -8px 2px 0px #1F73D8 inset;
+    box-shadow: 0px -8px 2px 0px #0A57B4 inset;
 }
 
 .purple {
@@ -60,9 +67,19 @@
     line-height: normal;
 }
 
+.lightText {
+    color: #FFF;
+    text-shadow: 3px 5px 0px #00B2FF;
+    font-family: Manrope;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
 .blueText {
     color: #FFF;
-    text-shadow: 3px 5px 0px #1F73D8;
+    text-shadow: 3px 5px 0px #0A57B4;
     font-family: Manrope;
     font-size: 40px;
     font-style: normal;
@@ -88,4 +105,170 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+
+.select {
+    border-radius: 15px;
+    background: #303030;
+    width: 100%;
+    height: 70px;
+    -moz-appearance: auto;
+    /* Firefox */
+    -webkit-appearance: auto;
+    /* Safari and Chrome */
+    appearance: auto;
+    font-size: 30px;
+    color: #FFF;
+    padding-top: 13.5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 13.5px;
+}
+
+.createAct {
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #FFF;
+    font-size: 21px;
+    border-radius: 15px;
+    background: #303030;
+}
+
+.list {
+    display: flex;
+    // flex-direction: column;
+    gap: 17px;
+    width: 100%;
+    align-items: stretch;
+    margin-bottom: 15vh;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.element {
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    border-radius: 15px;
+    border: 1px solid #FFF;
+    background: #303030;
+    color: #FFF;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 461px;
+}
+
+.lectionTitle {
+    font-size: 28px;
+}
+
+.lectionSubtitle {
+    font-size: 16px;
+}
+
+.lectionAuthor {
+    font-size: 13px;
+}
+
+.lectionTime {
+    text-align: right;
+    font-size: 13px;
+}
+
+.compTitle {
+    font-size: 35px;
+}
+
+.compSubtitle {
+    font-size: 17px;
+}
+
+.compAuthor {
+    font-size: 15px;
+}
+
+.compTime {
+    text-align: right;
+    font-size: 13px;
+}
+
+.startupTitle {
+    font-size: 30px;
+}
+
+.startupSubtitle {
+    font-size: 18px;
+}
+
+.startupAuthor {
+    font-size: 15px;
+}
+
+.internTitle {
+    font-size: 35px;
+}
+
+.internSubtitle {
+    font-size: 18px;
+}
+
+.internSalary {
+    text-align: right;
+    font-size: 15px;
+}
+
+.title,
+.desc,
+.date {
+    width: 100%;
+    border-radius: 15px;
+    background: #303030;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 23px;
+    padding-right: 23px;
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.70);
+        font-family: Manrope;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+}
+
+.colored {
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    padding: 15px;
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    border-radius: 15px;
+    border: none;
+    background: linear-gradient(90deg, rgba(21, 80, 151, 0.90) 0%, rgba(38, 67, 131, 0.90) 13.97%, rgba(61, 64, 113, 0.90) 31.63%, rgba(93, 69, 107, 0.90) 48.53%, rgba(134, 74, 92, 0.90) 64.30%, rgba(173, 78, 83, 0.90) 82.91%, rgba(225, 86, 69, 0.90) 100%);
+
+    &:hover {
+        box-shadow: 0px 0px 1px 1px rgba(255, 255, 255, 0.70) inset;
+    }
 }

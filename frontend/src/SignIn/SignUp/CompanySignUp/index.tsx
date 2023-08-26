@@ -1,8 +1,16 @@
+import { FormEvent } from "react";
 import style from "../../SignIn.module.scss";
+import { toast } from "react-toastify";
 
 const CompanySignUp = () => {
+
+    const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        toast.warning("В разработке");
+    }
+
     return (
-        <form className={style.SignIn}>
+        <form onSubmit={handleSubmit} className={style.SignIn}>
             <h2>Регистрация компании</h2>
             <div className={style.auth}>
                 <input className={style.first} type="login" placeholder="Логин" />

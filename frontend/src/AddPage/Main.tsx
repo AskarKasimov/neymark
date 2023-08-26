@@ -6,6 +6,9 @@ const Main = () => {
         <>
             <h1 className={style.usualText}>Активности</h1>
             <div className={style.AddPage}>
+                <Link to="internships" className={style.AddButton + " " + style.light}>
+                    <p>Стажировки</p>
+                </Link>
                 <Link to="lections" className={style.AddButton + " " + style.blue}>
                     <p>Лекции</p>
                 </Link>

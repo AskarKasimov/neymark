@@ -94,7 +94,16 @@
 
 .filter {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    max-width: 200px;
+    // align-items: center;
+    gap: 10px;
+}
+
+.activitiesList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 15vh;
 }

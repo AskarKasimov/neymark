@@ -88,3 +88,21 @@
         line-height: normal;
     }
 }
+
+.links {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 40px;
+    width: 100%;
+    gap: 20px;
+    & a {
+        width: 40px;
+        height: 40px;
+        & svg {
+            width: 40px;
+            height: 40px;
+        }
+    }
+}

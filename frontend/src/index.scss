@@ -56,7 +56,6 @@ input[type="date"],
 select {
     background-color: #FFF;
     padding: 15px;
-    font-family: "Roboto Mono", monospace;
     color: #000000;
     font-size: 18px;
     font-weight: bold;
@@ -66,14 +65,14 @@ select {
 }
 
 select {
-    width: 40px;
-    height: 40px;
-    -moz-appearance: none;
+    // width: 40px;
+    // height: 40px;
+    // -moz-appearance: none;
     /* Firefox */
-    -webkit-appearance: none;
+    // -webkit-appearance: none;
     /* Safari and Chrome */
-    appearance: none;
-    font-size: 0;
+    // appearance: none;
+    // font-size: 0;
 }
 
 option {
@@ -96,4 +95,70 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+textarea {
+    resize: none;
+}
+
+.box {
+    // visibility: hidden;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+    height: 15px;
+    width: 105px;
+    display: flex;
+    position: relative;
+
+    .circle {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #fff;
+        animation: move 500ms linear 0ms infinite;
+        margin-right: 30px;
+
+        &:first-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: grow 500ms linear 0ms infinite;
+        }
+
+        &:last-child {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-right: 0;
+            animation: grow 500ms linear 0s infinite reverse;
+        }
+    }
+}
+
+@keyframes grow {
+    from {
+        transform: scale(0, 0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0px)
+    }
+
+    to {
+        transform: translateX(45px)
+    }
 }

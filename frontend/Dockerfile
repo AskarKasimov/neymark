@@ -12,5 +12,5 @@ WORKDIR /
 COPY --from=builder ./node_modules ./node_modules
 COPY --from=builder ./build ./build
 COPY node-server.js ./
-EXPOSE 8181
+EXPOSE 3000
 ENTRYPOINT ["node", "node-server.js"]

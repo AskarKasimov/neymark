@@ -68,12 +68,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: stretch;
-    gap: 14px;
+    // align-items: stretch;
+    gap: 20px;
+    margin-bottom: 15vh;
 }
 
 .achievement {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background-color: #FFF;
 }

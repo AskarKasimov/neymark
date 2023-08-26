@@ -14,7 +14,25 @@ const Profile = () => {
             </div>
             <h3>Ачивки</h3>
             <div className={style.achievements}>
-            <div className={style.achievement}></div>
+                <div className={style.achievement}></div>
+                <div className={style.achievement}></div>
+                <div className={style.achievement}></div>
+                <div className={style.achievement}></div>
+                <div className={style.achievement}></div>
+                <div className={style.achievement}></div>
+                <div className={style.achievement}></div>
+                <div className={style.achievement}></div>
+                <div className={style.achievement}></div>
+                <div className={style.achievement}></div>
+                <div className={style.achievement}></div>
+                <div className={style.achievement}></div>
+                <div className={style.achievement}></div>
+                <div className={style.achievement}></div>
+                <div className={style.achievement}></div>
+                <div className={style.achievement}></div>
+                <div className={style.achievement}></div>
+                <div className={style.achievement}></div>
+                <div className={style.achievement}></div>
                 <div className={style.achievement}></div>
                 <div className={style.achievement}></div>
                 <div className={style.achievement}></div>

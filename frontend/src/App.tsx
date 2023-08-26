@@ -1,25 +1,44 @@
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import style from "./App.module.scss";
 
 import NavBar from "./NavBar";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { useEffect } from "react";
+import { useUserQuery } from "./store/API/neymark.auth";
+
+const Redirect = (props: { path: string }) => {
+    const navigate = useNavigate();
+    useEffect(() => {
+        navigate(props.path);
+    }, []);
+
+    return (<></>);
+}
 
 const App = () => {
     const path = useLocation();
-    const authed = true;
+    const { isLoading: userLoading, isSuccess: userSuccess, refetch } = useUserQuery(null);
+
     useEffect(() => {
+        refetch();
+        if (path.pathname.includes("sign-in") || path.pathname.includes("sign-up")) return;
         window.scrollTo(0, 0);
-    }, [path])
+    }, [path.pathname]);
+
     return (
         <div className={style.App}>
             {
-                authed
-                    ? <NavBar />
-                    : null
+                userLoading
+                    ? <>загружаюсь ёмаё</>
+                    : path.pathname.includes("sign-in") || path.pathname.includes("sign-up")
+                        ? userSuccess
+                            ? <Redirect path="/" />
+                            : <><Outlet /></>
+                        : userSuccess
+                            ? <><NavBar /><Outlet /></>
+                            : <Redirect path="/sign-in" />
             }
-            <Outlet />
             <ToastContainer
                 position="bottom-right"
                 autoClose={3000}

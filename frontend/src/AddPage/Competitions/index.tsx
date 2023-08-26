@@ -6,12 +6,22 @@ const Competitions = () => {
         <>
             <h1 className={style.redText}>Соревнования</h1>
             <div className={style.AddPage}>
-                <Link to="join" className={style.AddButton + " " + style.red}>
-                    <p>Присоединиться</p>
+                <select className={style.select}>
+                    <option value="" selected disabled hidden>Фильтр</option>
+                    <option value="">Все</option>
+                    <option value="InfoSec">InfoSec</option>
+                </select>
+                <Link to="create" className={style.createAct}>
+                    Создать
                 </Link>
-                <Link to="create" className={style.AddButton + " " + style.red}>
-                    <p>Создать</p>
-                </Link>
+                <div className={style.list}>
+                    <div className={style.element}>
+                        <p className={style.compTitle}>NeimarkCTF</p>
+                        <p className={style.compSubtitle}>Информационная безопасность</p>
+                        <p className={style.compAuthor}>Иванов И.</p>
+                        <p className={style.compTime}>25.08.2023/14:10</p>
+                    </div>
+                </div>
             </div>
         </>
     );

@@ -1,12 +1,12 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { IRegUser, IUser1step } from "./models.api";
+import { IReg2User, IUser, IUser2step } from "./models.api";
 
 
 
-export const neymarkAPI = createApi({
-    reducerPath: "API",
+export const neymarkAuth = createApi({
+    reducerPath: "Auth",
     baseQuery: fetchBaseQuery({
-        baseUrl: "https://neimark-backend.onrender.com",
+        baseUrl: "https://auth-server-7chs.onrender.com",
         prepareHeaders: (headers) => {
             let token = "";
             try {
@@ -20,16 +20,23 @@ export const neymarkAPI = createApi({
         }
     }),
     endpoints: build => ({
-        authentication: build.mutation<IUser1step, IRegUser>({
+        authUser: build.mutation<IUser2step, IReg2User>({
             query: (body) => ({
-                url: "user/create",
+                url: "auth/local",
                 method: "POST",
                 body: body,
+            })
+        }),
+        user: build.query<IUser, null>({
+            query: () => ({
+                url: "auth",
+                method: "GET"
             })
         })
     })
 })
 
 export const {
-    useAuthenticationMutation,
-} = neymarkAPI;
+    useAuthUserMutation,
+    useUserQuery,
+} = neymarkAuth;
